@@ -1,5 +1,7 @@
 from django.shortcuts import render
+from django.urls import reverse
 from places.models import Place
+from places.views import place as places_view
 
 
 def index(request):
@@ -21,7 +23,7 @@ def index(request):
                 "properties": {
                     "title": place.title,
                     "placeId": place.id,
-                    "detailsUrl": f"static/places/{place.placeId}.json"
+                    "detailsUrl": reverse(places_view, args=[place.id])
                 }
             }
         )
