@@ -16,12 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from . import views
+from places import views as places_views
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('', views.index),
+    path('admin/', admin.site.urls),
+    path('places/<int:place_id>/', places_views.place)
 ]
 
 if settings.DEBUG:
