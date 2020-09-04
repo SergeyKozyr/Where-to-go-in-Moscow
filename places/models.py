@@ -14,9 +14,12 @@ class Place(models.Model):
 
 
 class Image(models.Model):
-    index = models.SmallIntegerField()
+    index = models.PositiveSmallIntegerField(default=0, blank=False, null=False)
     place = models.ForeignKey(Place, on_delete=models.CASCADE)
     image_file = models.ImageField()
+
+    class Meta:
+        ordering = ['index']
 
     def __str__(self):
         return f'{self.index} {self.place}'
