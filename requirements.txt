@@ -1,0 +1,6 @@
+Django==3.1
+django-admin-sortable2==0.7.7
+django-tinymce==3.0.2
+python-dotenv==0.12.0
+virtualenv==20.0.31
+virtualenvwrapper-win==1.2.6
