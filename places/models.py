@@ -19,7 +19,7 @@ class Place(models.Model):
 
 class Image(models.Model):
     index = models.PositiveSmallIntegerField('Позиция', default=0, blank=False, null=False)
-    place = models.ForeignKey(Place, on_delete=models.CASCADE, verbose_name='Место на карте')
+    place = models.ForeignKey(Place, on_delete=models.CASCADE, related_name='images', verbose_name='Место на карте')
     image_file = models.ImageField('Фотография')
 
     class Meta:
