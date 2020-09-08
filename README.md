@@ -1,7 +1,19 @@
 # Map of Moscow's interesting places
 
-<img src="media/ezgif.com-gif-maker_4nWhtfQ.gif">
+Interactive map of the most interesting places in Moscow, such as: 
 
+- Guided tours 
+- Museums 
+- Scenic viewpoints 
+- and other different sights.
+
+Each place has a set of photos, a description and contact information.
+
+---
+
+<img src="screenshots/readme.gif">
+
+---
 - The data is taken from [Kudago](https://kudago.com/msk/)
 
 - [Website](http://kozyrsergey.pythonanywhere.com/)
@@ -19,6 +31,8 @@
 1. Install dependencies 
 
         pip install -r requirements.txt
+
+1. Create .env with the variables `SECRET_KEY="Secret key"` and `DEBUG=False`. About [SECRET_KEY](https://docs.djangoproject.com/en/3.1/ref/settings/#secret-key) and [DEBUG](https://docs.djangoproject.com/en/3.1/ref/settings/#debug)
 
 1. Add places on map 
 
