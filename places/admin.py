@@ -1,6 +1,6 @@
 from django.contrib import admin
-from django.utils.html import format_html
 from adminsortable2.admin import SortableInlineAdminMixin
+from django.utils.html import format_html
 from .models import Place, Image
 
 
@@ -11,7 +11,10 @@ class ImageInline(SortableInlineAdminMixin, admin.TabularInline):
     extra = 0
 
     def thumbnail(self, instance):
-        return format_html('<img src={} height={} />', instance.image_file.url, 200)
+        if instance.image_file:
+            return format_html('<img src={} height={} />', instance.image_file.url, 200)
+        else:
+            return 'Здесь будет превью, когда вы добавите файл'
 
 
 @admin.register(Place)
