@@ -55,7 +55,6 @@
         </div>
       </div>
 
-<<<<<<< HEAD
     <div class="place-description" v-if="selectedPlace">
 
       <img v-if="mainPhotoSrc" v-bind:src="mainPhotoSrc" class="d-block shadow mb-3 rounded" v-bind:alt="selectedPlace.title">
@@ -63,14 +62,11 @@
       <h5 class="mb-3">{{ selectedPlace.title }}</h5>
       
         <p>{{ selectedPlace.short_description }}</p>    
-=======
-    {% verbatim %}
+
       <div class="place-description" v-if="selectedPlace">
         <img v-if="mainPhotoSrc" v-bind:src="mainPhotoSrc" class="d-block shadow mb-3 rounded" v-bind:alt="selectedPlace.title">
         <h5 class="mb-3">{{ selectedPlace.title }}</h5>
           <p>{{ selectedPlace.short_description }}</p>
-    {% endverbatim %}
->>>>>>> 06d609fda8bbc88fbed2cc7db5fde45c3155a8a3
 
         <div id="place-photos" class="carousel slide mb-3 shadow" data-ride="carousel" data-interval="5000">
           <ol class="carousel-indicators">
